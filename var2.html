@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Скрытие и отображение элементов</title>
+</head>
+<body>
+    <button onclick="hideEvenRows()">Скрыть четные элементы</button>
+    <button onclick="showElements()">Отобразить элементы</button>
+
+    <table>
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+        <tr><td>Row 3</td></tr>
+        <tr><td>Row 4</td></tr>
+        <tr><td>Row 5</td></tr>
+    </table>
+
+    <script>
+        function hideEvenRows() {
+            var trElements = document.getElementsByTagName('tr');
+            for (var i = 0; i < trElements.length; i++) {
+                if (i % 2 === 1) {
+                    trElements[i].style.display = 'none';
+                }
+            }
+        }
+
+        function showElements() {
+            var trElements = document.getElementsByTagName('tr');
+            for (var i = 0; i < trElements.length; i++) {
+                trElements[i].style.display = 'table-row';
+            }
+        }
+    </script>
+</body>
+</html>
